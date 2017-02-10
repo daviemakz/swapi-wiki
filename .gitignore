@@ -1,3 +1,7 @@
+# Build directories
+build/
+semantic/tasks/build/
+
 # Logs
 logs
 *.log
