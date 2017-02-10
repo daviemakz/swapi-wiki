@@ -1,6 +1,6 @@
 var http = require("http");
 
-// SWAPI API Base URL
+// swapi api base url
 var baseUrl = 'http://swapi.co/api/';
 
 // api call - get characters

@@ -181,3 +181,17 @@ hr {
 .ui.button {
   margin-top: 8px;
 }
+
+/* ==========================================================================
+  Profile Area Specific
+  ========================================================================== */
+
+.profile-content-para {
+  text-align: center;
+}
+
+.profile-img-ava img {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+}

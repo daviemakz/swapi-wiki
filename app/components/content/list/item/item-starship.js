@@ -17,15 +17,19 @@ function RandomAvatar () {
 }
 
 var ListSingleItem = React.createClass({
-  notImplemented: function () {
-    alert("Currently not implemented!")
+  propTypes: {
+    id: React.PropTypes.number,
+    itemData: React.PropTypes.object,
+    goToEntity: React.PropTypes.func
   },
   render : function () {
-    console.log(this.props.itemData);
+    var apiId = this.props.itemData.url.match(/(.+\/)(\d+)(\/)/)[2]
     return (
-      <div id={this.props.key} className="item">
+      <div id={this.props.id} className="item">
         <div className="right floated content">
-        <div onClick={this.notImplemented} className="ui button">More Info</div>
+          <div id={apiId}
+            onClick={() => this.props.goToEntity(apiId,'starship',this.props.itemData)}
+            className="ui button">More Info</div>
         </div>
         <img className="ui avatar image" src={RandomAvatar()}/>
         <div className="content">

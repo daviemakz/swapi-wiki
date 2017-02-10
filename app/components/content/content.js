@@ -1,12 +1,12 @@
 var React = require('react');
 var Characters = require('./characters/characters');
-var Favorites = require('./favorites/favorites');
 var Planets = require('./planets/planets');
 var Starships = require('./starships/starships');
+var Profile = require('./profile/profile');
 
 var Content = React.createClass({
   propTypes: {
-    pageState: React.PropTypes.object
+    currentStatus: React.PropTypes.object
   },
   render : function () {
     return (
@@ -16,10 +16,15 @@ var Content = React.createClass({
         </div>
         <div id="cont" className="container-cont container-common">
           <div id="row" className="container-area">
-          {(this.props.pageState.currentPage == 'characters') && <Characters />}
-          {(this.props.pageState.currentPage == 'planets') && <Planets />}
-          {(this.props.pageState.currentPage == 'starships') && <Starships />}
-          {(this.props.pageState.currentPage == 'favorites') && <Favorites />}
+          {(this.props.currentStatus.pageState.currentPage == 'characters') &&
+          <Characters actionHandlers={this.props.currentStatus.handlers} />}
+          {(this.props.currentStatus.pageState.currentPage == 'planets') &&
+          <Planets actionHandlers={this.props.currentStatus.handlers} />}
+          {(this.props.currentStatus.pageState.currentPage == 'starships') &&
+          <Starships actionHandlers={this.props.currentStatus.handlers} />}
+          {(this.props.currentStatus.pageState.currentPage == 'profile') &&
+          <Profile actionHandlers={this.props.currentStatus.handlers}
+          profileData={this.props.currentStatus.profile} />}
           </div>
         </div>
       </div>

@@ -8,7 +8,7 @@ var entity = 'character';
 
 var Characters = React.createClass({
   propTypes: {
-    pageState: React.PropTypes.object
+    actionHandlers: React.PropTypes.object
   },
   getInitialState: function () {
     return {
@@ -25,10 +25,13 @@ var Characters = React.createClass({
     };
   },
   buildOutput: function () {
+    var self = this;
     if (this.state.dataReady) {
       return (
         <div>
-        <List listType={entity} listData={this.state.dataList.results} />
+          <List listType={entity}
+          listData={this.state.dataList.results}
+          actionHandlers={self.props.actionHandlers}/>
           <PaginationBar
             currentPaginationNumber={this.state.paginationNumber}
             maxPaginationNumber={this.state.maxPages}
@@ -39,7 +42,7 @@ var Characters = React.createClass({
     } else {
       return (
         <div>
-        <img src={LoadingGif} className="loading-img"/>
+          <img src={LoadingGif} className="loading-img"/>
           <PaginationBar
             currentPaginationNumber={this.state.paginationNumber}
             maxPaginationNumber={this.state.maxPages}
@@ -60,7 +63,9 @@ var Characters = React.createClass({
       this.setState({
         dataReady: 1,
         dataList: data,
-        maxPages: Math.round(data.count/(data.results.length == 10 ? data.results.length : 10))
+        maxPages: Math.round(
+          data.count/(data.results.length == 10 ? data.results.length : 10)
+        )
       });
     }
   },

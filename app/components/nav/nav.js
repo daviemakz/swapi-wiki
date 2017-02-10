@@ -4,13 +4,14 @@ var NavMenu = require('./menu/menu');
 
 var Nav = React.createClass({
   propTypes: {
-    pageState: React.PropTypes.object
+    currentStatus: React.PropTypes.object
   },
   render : function () {
     return (
       <div id="nav" className="container-nav container-common">
         <NavLogo />
-        <NavMenu pageState={this.props.pageState} />
+        <NavMenu pageState={this.props.currentStatus.pageState}
+        actionHandlers={this.props.currentStatus.handlers} />
       </div>
     );
   }
