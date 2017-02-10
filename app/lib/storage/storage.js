@@ -1,12 +1,12 @@
 // where data is stored...
 var data = {
-  people : [],
-  planet : [],
-  starship : []
+  people: [],
+  planet: [],
+  starship: []
 }
 
 // set favorite
-function setFavorite (id,type) {
+function setFavorite(id, type) {
   if (!(data[type].indexOf(id) > -1)) {
     data[type].push(id);
   }
@@ -14,7 +14,7 @@ function setFavorite (id,type) {
 }
 
 // check if favorite
-function isFavorite (id,type) {
+function isFavorite(id, type) {
   if ((data[type].indexOf(id) > -1)) {
     return true;
   } else {
@@ -23,7 +23,7 @@ function isFavorite (id,type) {
 }
 
 // remove favorite
-function removeFavorite (id,type) {
+function removeFavorite(id, type) {
   if ((data[type].indexOf(id) > -1)) {
     data[type].splice(data[type].indexOf(id), 1);
   }
@@ -31,7 +31,7 @@ function removeFavorite (id,type) {
 }
 
 // get data object - debug
-function getData () {
+function getData() {
   return data;
 }
 

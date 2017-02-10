@@ -6,7 +6,7 @@ var App = require('./components/app');
 import Css from './css/main.css';
 
 // render body
-ReactDOM.render(
-  <App />,
+ReactDOM.render( <
+  App / > ,
   document.getElementById('app')
 );

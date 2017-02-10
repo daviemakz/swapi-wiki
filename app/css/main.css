@@ -2,58 +2,72 @@
    Default Styling
    ========================================================================== */
 
+
 /* no margins/padding on body */
+
 body {
-   margin: 0;
-   padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
+
 /* separator */
+
 hr {
-  width:80%;
+  width: 80%;
   border-top: 1px solid #cccccc;
-  box-shadow: 0 1px 15px rgba(0,0,0,.2);
+  box-shadow: 0 1px 15px rgba(0, 0, 0, .2);
 }
 
 #app {
   background-color: #eeeeee;
 }
 
+
 /* ==========================================================================
    Page Structuring
    ========================================================================== */
 
+
 /* appication container spanning full width of viewport */
+
 .container-fluid {
-  width:100%;
-  height:100%;
+  width: 100%;
+  height: 100%;
   padding-right: 0px;
   padding-left: 0px;
 }
 
+
 /* appication sub container - navigation */
+
 .container-nav {
-  width:20%;
-  height:100vh;
-  float:left;
+  width: 20%;
+  height: 100vh;
+  float: left;
   background-color: #eeeeee;
   min-width: 150px;
   border-right: 1px solid #fff;
   box-shadow: 5px 0 5px -5px #aaa;
 }
 
+
 /* appication sub container - content */
+
 .container-cont {
-  height:100%;
-  float:right;
+  height: 100%;
+  float: right;
   background-color: #d5dfe8;
 }
+
 
 /* ==========================================================================
    Container Common
    ========================================================================== */
 
+
 /* sub container common */
+
 .container-common {
   padding-top: 15px
 }
@@ -68,19 +82,24 @@ hr {
   padding-top: 30px;
 }
 
+
 /* ==========================================================================
    Navigation Area Specific
    ========================================================================== */
 
+
 /* button width on navigation area */
+
 .container-nav .btn-block {
-  width:80%;
+  width: 80%;
   margin-top: 15px;
   margin-left: auto;
   margin-right: auto;
 }
 
+
 /* navigational plane logo */
+
 .nav-logo-img {
   height: auto;
   width: auto;
@@ -88,31 +107,36 @@ hr {
   max-height: 100%;
 }
 
+
 /* ==========================================================================
   Content Area Specific
   ========================================================================== */
 
+
 /* responsive styling */
+
 @media screen and (min-width: 725px) {
   .container-cont {
-    width:80%;
+    width: 80%;
   }
   .screen-warning {
-    display:none;
+    display: none;
   }
 }
 
 @media screen and (max-width: 725px) {
   .container-cont {
-    display:none;
+    display: none;
   }
   .screen-warning {
     position: relative;
-    display:block;
+    display: block;
   }
 }
 
+
 /* loading gif */
+
 .loading-img {
   display: block;
   height: auto;
@@ -121,11 +145,13 @@ hr {
   max-height: 100%;
   margin-left: auto;
   margin-right: auto;
-  margin-top:190px;
-  margin-bottom:190px;
+  margin-top: 190px;
+  margin-bottom: 190px;
 }
 
+
 /* main area */
+
 .container-cont .container-area {
   position: relative;
   text-align: left;
@@ -149,8 +175,10 @@ hr {
   border-radius: 5px;
 }
 
+
 /* pagination */
-.container-area .pagination  {
+
+.container-area .pagination {
   display: table;
   padding-left: 0;
   margin: 20px auto;
@@ -160,6 +188,7 @@ hr {
 .pagination-area {
   padding-top: 5px;
 }
+
 
 /* ==========================================================================
   List Area Specific
@@ -181,6 +210,7 @@ hr {
 .ui.button {
   margin-top: 8px;
 }
+
 
 /* ==========================================================================
   Profile Area Specific

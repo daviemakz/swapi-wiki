@@ -17,16 +17,16 @@ var App = React.createClass({
         entityData: undefined
       },
       handlers: {
-        navigatePage : this.handleNavigatePage,
-        navigateProfile : this.handleNavigateProfile,
-        getPageType : this.getProfileType
+        navigatePage: this.handleNavigatePage,
+        navigateProfile: this.handleNavigateProfile,
+        getPageType: this.getProfileType
       }
     };
   },
   getProfileType: function () {
     return this.state.profile.entityType;
   },
-  getProfilePage: function (objType,objData) {
+  getProfilePage: function (objType, objData) {
     // set profile information
     this.setState({
       profile: {
@@ -41,18 +41,18 @@ var App = React.createClass({
       }
     });
   },
-  handleNavigateProfile: function (id,type,data) {
+  handleNavigateProfile: function (id, type, data) {
     // use existing data or get new data
     if (data) {
       // append id & load profile
       data.apiId = id;
-      this.getProfilePage(type,data);
+      this.getProfilePage(type, data);
     } else {
       // get new data
-      API.getObject(id,type,function (objectData) {
+      API.getObject(id, type, function (objectData) {
         // append id & load profile
         data.apiId = id;
-        this.getProfilePage(type,objectData);
+        this.getProfilePage(type, objectData);
       })
     }
   },
@@ -64,7 +64,7 @@ var App = React.createClass({
       }
     });
   },
-  render : function () {
+render : function () {
     return (
       <div className="container-fluid">
         <Nav currentStatus={this.state} />
