@@ -7,7 +7,7 @@ To install run the following command:
     npm run install
 
 # Running The Application
-After you have installed the application locally modules, to build the application run:
+After you have installed the application locally, build via this command:
 
     npm run build
 
@@ -15,8 +15,8 @@ Then to execute:
 
     npm run start
 
-Navigate to:
+If all is well a server should have started in the console. Now all you need to do is visit this address:
 
     http://localhost:8080/
 
-Have fun, send any bugs to d.makuni@live.co.uk
+Have fun!
