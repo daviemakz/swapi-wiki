@@ -4,12 +4,10 @@
 
 
 /* no margins/padding on body */
-
 body {
   margin: 0;
   padding: 0;
 }
-
 
 /* separator */
 
@@ -20,7 +18,7 @@ hr {
 }
 
 #app {
-  background-color: #eeeeee;
+  background-color: #d5dfe8;
 }
 
 
